@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "27.0.3"
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 25
@@ -22,11 +21,11 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestApi('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     api 'com.android.support:appcompat-v7:25.0.1'
-    testApi 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
     api 'com.facebook.react:react-native:0.20.+'
     api 'com.google.android.exoplayer:exoplayer:r2.1.1'
 }
